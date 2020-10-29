@@ -52,6 +52,7 @@ const (
 // on the dependencies of generated source code.
 var (
 	protoPackage         goImportPath = protogen.GoImportPath("google.golang.org/protobuf/proto")
+	privacyPackage       goImportPath = protogen.GoImportPath("github.com/CSCI-2390-Project/privacy-go")
 	protoifacePackage    goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoiface")
 	protoimplPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/runtime/protoimpl")
 	protojsonPackage     goImportPath = protogen.GoImportPath("google.golang.org/protobuf/encoding/protojson")
@@ -503,7 +504,9 @@ func genMessageBaseMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageInf
 
 	// String method.
 	g.P("func (x *", m.GoIdent, ") String() string {")
-	g.P("return ", protoimplPackage.Ident("X"), ".MessageStringOf(x)")
+	g.P("y := ", protoPackage.Ident("Clone"), "(x)")
+	g.P(privacyPackage.Ident("PermissionedRecursiveDecrypt"), "(y)")
+	g.P("return ", protoimplPackage.Ident("X"), ".MessageStringOf(y)")
 	g.P("}")
 	g.P()
 
@@ -600,7 +603,11 @@ func genMessageGetterMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageI
 			if pointer {
 				star = "*"
 			}
-			g.P("return ", star, " x.", field.GoName)
+			if goType == "string" {
+				g.P("return ", privacyPackage.Ident("PermissionedDecrypt"), "(", star, " x.", field.GoName, ")")
+			} else {
+				g.P("return ", star, " x.", field.GoName)
+			}
 			g.P("}")
 			g.P("return ", defaultValue)
 			g.P("}")
