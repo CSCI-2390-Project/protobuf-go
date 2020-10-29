@@ -28,16 +28,16 @@ import (
 	"strconv"
 	"strings"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/internal/strs"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protodesc"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/reflect/protoregistry"
+	"github.com/CSCI-2390-Project/protobuf-go/encoding/prototext"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/genid"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/strs"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protodesc"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoregistry"
 
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/pluginpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/pluginpb"
 )
 
 const goPackageDocURL = "https://developers.google.com/protocol-buffers/docs/reference/go-generated#package"
@@ -240,7 +240,7 @@ func (opts Options) New(req *pluginpb.CodeGeneratorRequest) (*Plugin, error) {
 	// .proto source file specifying the full import path of the Go package
 	// associated with this file.
 	//
-	//     option go_package = "google.golang.org/protobuf/types/known/anypb";
+	//     option go_package = "github.com/CSCI-2390-Project/protobuf-go/types/known/anypb";
 	//
 	// Build systems which want to exert full control over import paths may
 	// specify M<filename>=<import_path> flags.
@@ -1289,7 +1289,7 @@ func newGoIdent(f *File, d protoreflect.Descriptor) GoIdent {
 }
 
 // A GoImportPath is the import path of a Go package.
-// For example: "google.golang.org/protobuf/compiler/protogen"
+// For example: "github.com/CSCI-2390-Project/protobuf-go/compiler/protogen"
 type GoImportPath string
 
 func (p GoImportPath) String() string { return strconv.Quote(string(p)) }

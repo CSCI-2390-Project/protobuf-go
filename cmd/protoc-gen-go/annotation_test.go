@@ -9,11 +9,11 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/encoding/prototext"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/genid"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
 )
 
 func TestAnnotations(t *testing.T) {

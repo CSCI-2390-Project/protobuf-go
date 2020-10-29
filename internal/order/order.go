@@ -5,7 +5,7 @@
 package order
 
 import (
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 )
 
 // FieldOrder specifies the ordering to visit message fields.

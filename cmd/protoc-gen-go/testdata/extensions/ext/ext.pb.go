@@ -8,11 +8,11 @@
 package ext
 
 import (
-	base "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/extensions/base"
-	extra "google.golang.org/protobuf/cmd/protoc-gen-go/testdata/extensions/extra"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoiface "google.golang.org/protobuf/runtime/protoiface"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+	base "github.com/CSCI-2390-Project/protobuf-go/cmd/protoc-gen-go/testdata/extensions/base"
+	extra "github.com/CSCI-2390-Project/protobuf-go/cmd/protoc-gen-go/testdata/extensions/extra"
+	protoreflect "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	protoiface "github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
+	protoimpl "github.com/CSCI-2390-Project/protobuf-go/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 )

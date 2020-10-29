@@ -9,8 +9,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	piface "google.golang.org/protobuf/runtime/protoiface"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	piface "github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
 )
 
 // ExtensionInfo implements ExtensionType.

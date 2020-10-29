@@ -12,12 +12,12 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/testing/protopack"
-	"google.golang.org/protobuf/types/dynamicpb"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/testing/protopack"
+	"github.com/CSCI-2390-Project/protobuf-go/types/dynamicpb"
 
-	testpb "google.golang.org/protobuf/internal/testprotos/test"
+	testpb "github.com/CSCI-2390-Project/protobuf-go/internal/testprotos/test"
 )
 
 func TestEqual(t *testing.T) {

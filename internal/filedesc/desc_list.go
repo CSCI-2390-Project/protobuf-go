@@ -10,14 +10,14 @@ import (
 	"sort"
 	"sync"
 
-	"google.golang.org/protobuf/internal/genid"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/genid"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/descfmt"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/pragma"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/encoding/protowire"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/descfmt"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/errors"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/pragma"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 )
 
 type FileImports []pref.FileImport

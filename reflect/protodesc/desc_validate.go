@@ -8,15 +8,15 @@ import (
 	"strings"
 	"unicode"
 
-	"google.golang.org/protobuf/encoding/protowire"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/internal/flags"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/internal/strs"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/encoding/protowire"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/errors"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/filedesc"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/flags"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/genid"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/strs"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
 )
 
 func validateEnumDeclarations(es []filedesc.Enum, eds []*descriptorpb.EnumDescriptorProto) error {

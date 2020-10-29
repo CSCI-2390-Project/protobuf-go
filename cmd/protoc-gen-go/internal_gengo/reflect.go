@@ -10,11 +10,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"google.golang.org/protobuf/compiler/protogen"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/compiler/protogen"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
 )
 
 func genReflectFileDescriptor(gen *protogen.Plugin, g *protogen.GeneratedFile, f *fileInfo) {

@@ -8,8 +8,8 @@
 package proto
 
 import (
-	"google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
 )
 
 const hasProtoMethods = true

@@ -19,7 +19,7 @@ function compile_fuzzer {
 for x in internal/fuzz/*; do
   if [ -d $x/corpus ]; then
     name=$(basename $x)
-    compile_fuzzer google.golang.org/protobuf/$x Fuzz $name
+    compile_fuzzer github.com/CSCI-2390-Project/protobuf-go/$x Fuzz $name
     zip -jr $OUT/${name}_seed_corpus.zip $x/corpus
   fi
 done

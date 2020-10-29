@@ -12,12 +12,12 @@ import (
 	"strings"
 	"time"
 
-	"google.golang.org/protobuf/internal/encoding/json"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/genid"
-	"google.golang.org/protobuf/internal/strs"
-	"google.golang.org/protobuf/proto"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/encoding/json"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/errors"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/genid"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/strs"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 )
 
 type marshalFunc func(encoder, pref.Message) error

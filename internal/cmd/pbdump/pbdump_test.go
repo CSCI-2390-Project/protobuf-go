@@ -9,11 +9,11 @@ import (
 	"strings"
 	"testing"
 
-	"google.golang.org/protobuf/encoding/prototext"
-	"google.golang.org/protobuf/proto"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/encoding/prototext"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 
-	"google.golang.org/protobuf/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
 )
 
 func mustMakeMessage(s string) *descriptorpb.DescriptorProto {

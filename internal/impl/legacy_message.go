@@ -10,15 +10,15 @@ import (
 	"strings"
 	"sync"
 
-	"google.golang.org/protobuf/internal/descopts"
-	ptag "google.golang.org/protobuf/internal/encoding/tag"
-	"google.golang.org/protobuf/internal/errors"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/internal/strs"
-	"google.golang.org/protobuf/reflect/protoreflect"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	"google.golang.org/protobuf/runtime/protoiface"
-	piface "google.golang.org/protobuf/runtime/protoiface"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/descopts"
+	ptag "github.com/CSCI-2390-Project/protobuf-go/internal/encoding/tag"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/errors"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/filedesc"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/strs"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
+	piface "github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
 )
 
 // legacyWrapMessage wraps v as a protoreflect.Message,

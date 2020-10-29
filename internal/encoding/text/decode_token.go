@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"google.golang.org/protobuf/internal/flags"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/flags"
 )
 
 // Kind represents a token kind expressible in the textproto format.

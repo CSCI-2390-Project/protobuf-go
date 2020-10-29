@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"unicode/utf8"
 
-	"google.golang.org/protobuf/internal/errors"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/errors"
 )
 
 // Decoder is a token-based textproto decoder.

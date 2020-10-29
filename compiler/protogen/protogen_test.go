@@ -11,11 +11,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 
-	"google.golang.org/protobuf/types/descriptorpb"
-	"google.golang.org/protobuf/types/pluginpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/descriptorpb"
+	"github.com/CSCI-2390-Project/protobuf-go/types/pluginpb"
 )
 
 func init() {

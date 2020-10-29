@@ -8,12 +8,12 @@ package wirefuzz
 import (
 	"fmt"
 
-	"google.golang.org/protobuf/internal/impl"
-	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/reflect/protoregistry"
-	piface "google.golang.org/protobuf/runtime/protoiface"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/impl"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	"github.com/CSCI-2390-Project/protobuf-go/reflect/protoregistry"
+	piface "github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
 
-	fuzzpb "google.golang.org/protobuf/internal/testprotos/fuzz"
+	fuzzpb "github.com/CSCI-2390-Project/protobuf-go/internal/testprotos/fuzz"
 )
 
 // Fuzz is a fuzzer for proto.Marshal and proto.Unmarshal.

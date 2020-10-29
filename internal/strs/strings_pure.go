@@ -6,7 +6,7 @@
 
 package strs
 
-import pref "google.golang.org/protobuf/reflect/protoreflect"
+import pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 
 func UnsafeString(b []byte) string {
 	return string(b)

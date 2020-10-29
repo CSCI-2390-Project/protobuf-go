@@ -8,11 +8,11 @@ import (
 	"reflect"
 	"testing"
 
-	"google.golang.org/protobuf/internal/encoding/tag"
-	fdesc "google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/proto"
-	pdesc "google.golang.org/protobuf/reflect/protodesc"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/encoding/tag"
+	fdesc "github.com/CSCI-2390-Project/protobuf-go/internal/filedesc"
+	"github.com/CSCI-2390-Project/protobuf-go/proto"
+	pdesc "github.com/CSCI-2390-Project/protobuf-go/reflect/protodesc"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
 )
 
 func Test(t *testing.T) {

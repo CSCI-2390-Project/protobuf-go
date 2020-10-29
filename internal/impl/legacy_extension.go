@@ -7,14 +7,14 @@ package impl
 import (
 	"reflect"
 
-	"google.golang.org/protobuf/internal/descopts"
-	"google.golang.org/protobuf/internal/encoding/messageset"
-	ptag "google.golang.org/protobuf/internal/encoding/tag"
-	"google.golang.org/protobuf/internal/filedesc"
-	"google.golang.org/protobuf/internal/pragma"
-	pref "google.golang.org/protobuf/reflect/protoreflect"
-	preg "google.golang.org/protobuf/reflect/protoregistry"
-	piface "google.golang.org/protobuf/runtime/protoiface"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/descopts"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/encoding/messageset"
+	ptag "github.com/CSCI-2390-Project/protobuf-go/internal/encoding/tag"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/filedesc"
+	"github.com/CSCI-2390-Project/protobuf-go/internal/pragma"
+	pref "github.com/CSCI-2390-Project/protobuf-go/reflect/protoreflect"
+	preg "github.com/CSCI-2390-Project/protobuf-go/reflect/protoregistry"
+	piface "github.com/CSCI-2390-Project/protobuf-go/runtime/protoiface"
 )
 
 func (xi *ExtensionInfo) initToLegacy() {
