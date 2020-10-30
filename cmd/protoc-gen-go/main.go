@@ -16,9 +16,9 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/CSCI-2390-Project/protobuf-go/internal/version"
 	gengo "google.golang.org/protobuf/cmd/protoc-gen-go/internal_gengo"
 	"google.golang.org/protobuf/compiler/protogen"
-	"google.golang.org/protobuf/internal/version"
 )
 
 func main() {
