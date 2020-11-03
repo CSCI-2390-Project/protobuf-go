@@ -604,10 +604,7 @@ func genMessageGetterMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageI
 				star = "*"
 			}
 			if goType == "string" {
-				messageName := "\"" + m.GoIdent + "\""
-				fieldName := "\"" + field.GoName + "\""
-				g.P("return ", privacyPackage.Ident("PermissionedDecrypt"), "(", messageName, ", ", fieldName, ",", star, " x.", field.GoName, ")")
-				//g.P("return ", privacyPackage.Ident("PermissionedDecrypt"), "(", star, " x.", field.GoName, ")")
+				g.P("return ", privacyPackage.Ident("PermissionedDecrypt"), "(", "\"", m.GoIdent, "\"", ", ", "\"", field.GoName, "\"", ",", star, " x.", field.GoName, ")")
 			} else {
 				g.P("return ", star, " x.", field.GoName)
 			}
