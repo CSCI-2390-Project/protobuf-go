@@ -605,6 +605,12 @@ func genMessageGetterMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageI
 			}
 			if goType == "string" {
 				g.P("return ", privacyPackage.Ident("PermissionedDecrypt"), "(", "\"", m.GoIdent, "\"", ", ", "\"", field.GoName, "\"", ",", star, " x.", field.GoName, ")")
+			} else if goType == "[]string" {
+				g.P("y := []string{}")
+				g.P("for _, value := range ", star, "x.", field.GoName, " {")
+				g.P("y = append(y, ", privacyPackage.Ident("PermissionedDecrypt"), "(", "\"", m.GoIdent, "\"", ", ", "\"", field.GoName, "\"", ",", "value))")
+				g.P("}")
+				g.P("return y")
 			} else {
 				g.P("return ", star, " x.", field.GoName)
 			}
