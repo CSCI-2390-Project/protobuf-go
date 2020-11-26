@@ -1,5 +1,5 @@
-github.com/CSCI-2390-Project/protobuf-go v1.99.0 h1:4BkyrDMI49cacRUf0uM4aHhh88TM8HvdXn98BPPqeJg=
-github.com/CSCI-2390-Project/protobuf-go v1.99.0/go.mod h1:9JK6Fqge53i5BDJCTr6O9bMKDXy1Ey1cU4GYDlDbZm4=
+github.com/CSCI-2390-Project/protobuf-go v1.99.1-0.20201115000842-0ef3c91956ff h1:OeM84OKLgC3T6wQdVl8Lc0q6FBvMs9QqnJn8GDN4DkA=
+github.com/CSCI-2390-Project/protobuf-go v1.99.1-0.20201115000842-0ef3c91956ff/go.mod h1:EB+4QNckh3QqK0lb4d+HtkHNbmN7bqNDUtjwPIS4ljg=
 github.com/golang/protobuf v1.4.1 h1:ZFgWrT+bLgsYPirOnRfKLYJLvssAegOj/hgyMFdJZe0=
 github.com/golang/protobuf v1.4.1/go.mod h1:U8fpvMrcmy5pZrNK1lt4xCsGvpyWQ/VVv6QDs8UjoX8=
 github.com/google/go-cmp v0.4.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
