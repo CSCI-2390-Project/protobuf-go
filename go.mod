@@ -2,7 +2,7 @@ module github.com/CSCI-2390-Project/protobuf-go
 
 go 1.9
 
-replace google.golang.org/protobuf => github.com/CSCI-2390-Project/protobuf-go v1.25.1-0.20201103163948-0e3c149c6440
+replace google.golang.org/protobuf => github.com/CSCI-2390-Project/protobuf-go v1.99.0
 
 require (
 	github.com/golang/protobuf v1.4.1

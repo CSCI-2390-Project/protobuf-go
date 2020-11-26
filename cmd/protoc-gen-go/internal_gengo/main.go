@@ -618,26 +618,42 @@ func genMessageGetterMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageI
 
 func genMessageSetterMethods(g *protogen.GeneratedFile, f *fileInfo, m *messageInfo) {
 	for _, field := range m.Fields {
-		if !field.Desc.IsWeak() {
+		goType, _ := fieldGoType(g, f, field)
+		switch {
+		case field.Desc.IsWeak():
+			genNoInterfacePragma(g, m.isTracked)
+
+			g.Annotate(m.GoIdent.GoName+".Set"+field.GoName, field.Location)
+			leadingComments := appendDeprecationSuffix("",
+				field.Desc.Options().(*descriptorpb.FieldOptions).GetDeprecated())
+			g.P(leadingComments, "func (x *", m.GoIdent, ") Set", field.GoName, "(v ", protoPackage.Ident("Message"), ") {")
+			g.P("var w *", protoimplPackage.Ident("WeakFields"))
+			g.P("if x != nil {")
+			g.P("w = &x.", genid.WeakFields_goname)
+			if m.isTracked {
+				g.P("_ = x.", genid.WeakFieldPrefix_goname+field.GoName)
+			}
+			g.P("}")
+			g.P(protoimplPackage.Ident("X"), ".SetWeak(w, ", field.Desc.Number(), ", ", strconv.Quote(string(field.Message.Desc.FullName())), ", v)")
+			g.P("}")
+			g.P()
+		case field.Oneof != nil && !field.Oneof.Desc.IsSynthetic():
 			continue
+		default:
+			if goType == "string" {
+				leadingComments := appendDeprecationSuffix("",
+					field.Desc.Options().(*descriptorpb.FieldOptions).GetDeprecated())
+				g.P(leadingComments, "func (x *", m.GoIdent, ") Set", field.GoName, "(value string) error {")
+				g.P("value, err :=", privacyPackage.Ident("PermissionedEncrypt"), "(", "\"", m.GoIdent, "\"", ", ", "\"", field.GoName, "\"", ",value)")
+				g.P("if err != nil {")
+				g.P("return err")
+				g.P("}")
+				g.P("x.", field.GoName, "= value")
+				g.P("return nil")
+				g.P("}")
+				g.P()
+			}
 		}
-
-		genNoInterfacePragma(g, m.isTracked)
-
-		g.Annotate(m.GoIdent.GoName+".Set"+field.GoName, field.Location)
-		leadingComments := appendDeprecationSuffix("",
-			field.Desc.Options().(*descriptorpb.FieldOptions).GetDeprecated())
-		g.P(leadingComments, "func (x *", m.GoIdent, ") Set", field.GoName, "(v ", protoPackage.Ident("Message"), ") {")
-		g.P("var w *", protoimplPackage.Ident("WeakFields"))
-		g.P("if x != nil {")
-		g.P("w = &x.", genid.WeakFields_goname)
-		if m.isTracked {
-			g.P("_ = x.", genid.WeakFieldPrefix_goname+field.GoName)
-		}
-		g.P("}")
-		g.P(protoimplPackage.Ident("X"), ".SetWeak(w, ", field.Desc.Number(), ", ", strconv.Quote(string(field.Message.Desc.FullName())), ", v)")
-		g.P("}")
-		g.P()
 	}
 }
 
